@@ -1,7 +1,17 @@
 #!/usr/bin/python3
+""" Class Square that defines a square by
+    Private instance attribute: size
+    Private instance attirubute: position
+    Getter and Setters
+    Instantiation with optional size
+    size must be an integer
+    Public instance method: def area(self)
+    Public instance method: def my_print(self)
+"""
+
 
 class Square:
-
+    """ constructor"""
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position

@@ -14,10 +14,10 @@ class MagicClass:
             raise TypeError('radius must be a number')
         self.__radius = radius
 
-    # area
+    """ area"""
     def area(self):
         return self.__radius ** 2 * math.pi
 
-    # circumference
+    """circumference"""
     def circumference(self):
         return 2 * math.pi * self.

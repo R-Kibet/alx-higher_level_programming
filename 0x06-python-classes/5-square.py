@@ -1,7 +1,10 @@
 #!/usr/bin/python3
+""" class Square that defines a square by
+Private instance attribute: size: """
+
 
 class Square:
-
+    """ constructor"""
     def __init__(self, size=0):
         if type(size) != int:
             raise TypeError("size must be an integer")

@@ -1,7 +1,11 @@
 #!/usr/bin/python3
+""" class Square that defines a square by
+Private instance attribute size
+Private instance attribute: position"""
+
 
 class Square:
-
+    """ constructor"""
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position

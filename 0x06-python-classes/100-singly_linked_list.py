@@ -1,7 +1,11 @@
 #!/usr/bin/python3
+""" class Node that defines a node of a singly linked list by:
+
+    Private instance attribute: data: """
+
 
 class Node:
-
+    """ constructor"""
     def __init__(self, data, next_node=None):
         self.__data = data
         self.__next_node = next_node

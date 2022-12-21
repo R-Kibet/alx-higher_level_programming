@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Python class MagicClass that form bytecode oject"""
+""" Class form python bytecode for magic objects"""
 import math
 
 
@@ -11,10 +11,10 @@ class MagicClass:
             raise TypeError('radius must be a number')
         self.__radius = radius
 
-    """finding the  area"""
+   """Return the area"""
     def area(self):
         return self.__radius ** 2 * math.pi
 
-    """calculation of the circumference"""
+    """Return circumference"""
     def circumference(self):
         return 2 * math.pi * self.

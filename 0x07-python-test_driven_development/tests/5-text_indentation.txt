@@ -1,0 +1,50 @@
+5-text_indentation.py
+============================
+
+Test function for ``text_indentation``
+---------------------
+
+function of the module that indents text
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Normal test
+	>>> text_indentation("Nyash Worrior.?:")
+	Nyash Worrior.
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	
+string without special character
+	>>> text_indentation("Bunda")
+	Bunda
+
+Pword with a special character at the end and spaces
+
+	>>> text_indentation("Hello.")
+	Hello.
+	<BLANKLINE>
+
+Errors
+
+if int 
+	>>> text_indentation(2)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	
+if a float
+	>>> text_indentation(2.0)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	
+None
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	
+	 

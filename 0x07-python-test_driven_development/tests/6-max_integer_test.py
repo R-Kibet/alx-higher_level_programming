@@ -23,12 +23,13 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([-1, -3, -5, -4,]), -1)
 
     def test_mixed(self):
-	    self.assertEqual(max_integer([-1000, 2.5, 50, -50.1 * -2 ]), 100.2)
+        self.assertEqual(max_integer([-1000, 2.5, 50, -50.1 * -2]), 100.2)
 
     """ TypeError """
-    
+
     def test_string(self):
-       with  self.assertRaises(TypeError): max_integer([1 , '2'])
+        with self.assertRaises(TypeError):
+            max_integer([1, '2'])
 
     def test_dictionary(self):
         with self.assertRaises(KeyError):
@@ -37,4 +38,3 @@ class TestMaxInteger(unittest.TestCase):
     def test_number(self):
         with self.assertRaises(TypeError):
             max_integer(1)
-

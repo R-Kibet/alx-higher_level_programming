@@ -1,15 +1,18 @@
 #!usr/bin/python3
-""" Area and perimeter """
+""" Class Rectangle """
 
 
 class Rectangle:
 
     """ main class defines a rectangle
         Args:
-            height
-            width
+            height: height of rectangle
+            width: width of rectangle
+        Public instance method: def area(self)
+        Public instance method: def perimeter(self)
     """
     def __init__(self, width=0, height=0):
+	""" Constructor method """
         if type(width) != int:
             raise TypeError("width must be an integer")
         elif width < 0:
@@ -24,10 +27,12 @@ class Rectangle:
 
     @property
     def width(self):
+        """ getter width property """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """ setter width property """
         if type(value) != int:
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -37,10 +42,12 @@ class Rectangle:
 
     @property
     def height(self):
+        """ getter height property """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """ setter height property """
         if type(value) != int:
             raise TypeError("height must be an integer")
         elif value < 0:

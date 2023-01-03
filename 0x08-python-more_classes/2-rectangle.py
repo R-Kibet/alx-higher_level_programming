@@ -14,8 +14,8 @@ class Rectangle:
     """
     def __init__(self, width=0, height=0):
         """ Constructor method """
-            self.__height = height
-            self.__width = width
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
@@ -49,13 +49,13 @@ class Rectangle:
 
     def area(self):
         """ Return area of rectangle """
-        a = self.__width * self.__height
+        a = self.width * self.height
         return a
 
     def perimeter(self):
         """ Return perimeter """
-        p = (self.__width * 2) + (self.__height * 2)
-        if (self.__width == 0 or self.__height == 0):
+        p = (self.width * 2) + (self.height * 2)
+        if (self.width == 0 or self.height == 0):
             return 0
         else:
             return p

@@ -9,11 +9,14 @@ class Rectangle:
     Public instance method: def area(self)
     Public instance method: def perimeter(self)
     """
+    number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """ Constructor method """
         self.__width = width
         self.__height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):

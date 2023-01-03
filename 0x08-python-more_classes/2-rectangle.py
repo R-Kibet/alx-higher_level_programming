@@ -12,7 +12,7 @@ class Rectangle:
         Public instance method: def perimeter(self)
     """
     def __init__(self, width=0, height=0):
-	""" Constructor method """
+        """ Constructor method """
         if type(width) != int:
             raise TypeError("width must be an integer")
         elif width < 0:
@@ -56,10 +56,12 @@ class Rectangle:
             self.__height = value
 
     def area(self):
+        """ Return area of rectangle """
         a = self.__width * self.__height
         return a
 
     def perimeter(self):
+        """ Return perimeter """
         p = (self.__width * 2) + (self.__height * 2)
         if (self.__width == 0 or self.__height == 0):
             return 0

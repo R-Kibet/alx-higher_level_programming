@@ -4,12 +4,13 @@
 
 class Rectangle:
 
-    """ main class defines a rectangle
-        Args:
-            height: height of rectangle
-            width: width of rectangle
-        Public instance method: def area(self)
-        Public instance method: def perimeter(self)
+    """
+    Rectangle that defines a rectangle by:
+    Private instance attribute: width (int)
+    Private instance attribute: height (int)
+    Instantiation with optional width and height
+    Public instance method: def area(self)
+    Public instance method: def perimeter(self)
     """
     def __init__(self, width=0, height=0):
         """ Constructor method """

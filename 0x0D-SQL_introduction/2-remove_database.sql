@@ -1,3 +1,3 @@
- -- drops/deletes a database
- -- ensure script exists
- DROP DATABASE IF EXISTS hbtn_0c_0;
+-- drops/deletes a database
+-- ensure script exists
+DROP DATABASE IF EXISTS hbtn_0c_0;

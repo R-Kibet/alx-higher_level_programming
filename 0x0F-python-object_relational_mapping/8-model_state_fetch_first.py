@@ -23,17 +23,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-
-def first():
-    """
-    first state
-    """
-
     state = session.query(State).where(State.id == 1).order_by(State.id)
     if state is None:
         print("Nothing")
     for i in state:
         print('{}: {}'.format(i.id, i.name))
-
-
-first()

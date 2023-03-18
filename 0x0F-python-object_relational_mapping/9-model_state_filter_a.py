@@ -23,18 +23,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-
-def select():
-    """
-    contains 'a'
-    """
-
     st = session.query(State).filter(
             State.name.contains('a')).order_by(State.id)
     if st is None:
         print("Nothing")
     for i in st:
         print('{}: {}'.format(i.id, i.name))
-
-
-select()

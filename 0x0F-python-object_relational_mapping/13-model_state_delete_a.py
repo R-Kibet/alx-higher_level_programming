@@ -23,17 +23,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-
-def delete():
-    """
-    contains 'a'
-    """
-
     state = session.query(State).filter(State.name.contains('a'))
 
     for i in state:
         session.delete(i)
     session.commit()
-
-
-delete()

@@ -23,15 +23,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-
-def select():
-    """
-    get state user input
-    """
-
     state = session.query(State).filter(
             State.name == argv[4]).first()
     print('Not found' if not state else state.id)
-
-
-select()

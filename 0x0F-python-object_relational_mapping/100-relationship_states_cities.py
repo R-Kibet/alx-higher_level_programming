@@ -23,16 +23,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-
-def select():
-    """
-    add a state with cities
-    """
-
     newS = State(name='California')
     newC = City(name='San Francisco', state=newS)
     session.add(newC)
     session.commit()
-
-
-select()

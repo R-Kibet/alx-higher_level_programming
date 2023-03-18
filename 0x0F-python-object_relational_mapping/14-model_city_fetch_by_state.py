@@ -23,15 +23,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-
-def select():
-    """
-    print city
-    """
-
     state = session.query(State, City).join(City).order_by(City.id).all()
     for s, c in state:
         print('{}: ({}) {}'.format(s.name, c.id, c.name))
-
-
-select()

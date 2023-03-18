@@ -23,16 +23,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-
-def update():
-    """
-    update db
-    """
-
     state = session.query(State).filter(State.id == 2)
     for i in state:
         i.name = 'New Mexico'
     session.commit()
-
-
-update()

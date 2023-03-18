@@ -23,16 +23,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-
-def add():
-    """
-    add new state
-    """
-
     new = State(name="Louisiana")
     session.add(new)
     session.commit()
     print(new.id)
-
-
-add()

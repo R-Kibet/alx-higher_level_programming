@@ -23,15 +23,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-
-def selectAll():
-    """
-    list all states
-    """
-
     state = session.query(State).order_by(State.id)
     for i in state:
         print('{}: {}'.format(i.id, i.name))
-
-
-selectAll()

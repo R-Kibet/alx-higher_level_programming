@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This script shows use of join
+"""
 
 from sys import argv
 from model_state import Base, State

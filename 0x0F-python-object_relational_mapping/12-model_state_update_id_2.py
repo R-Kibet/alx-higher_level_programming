@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This script updates tables
+"""
 
 import sqlalchemy
 from sys import argv

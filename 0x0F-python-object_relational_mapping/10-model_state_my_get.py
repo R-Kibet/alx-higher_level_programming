@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This script filters with user input
+"""
 
 import sqlalchemy
 from sys import argv

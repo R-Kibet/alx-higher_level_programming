@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This script list first state
+"""
 
 import sqlalchemy
 import sys

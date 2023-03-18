@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This script fileter with a character
+"""
 
 import sqlalchemy
 import sys

@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This script deletes data from table
+"""
 
 import sqlalchemy
 import sys

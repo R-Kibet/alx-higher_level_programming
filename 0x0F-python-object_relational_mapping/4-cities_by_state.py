@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This script select cities name
+"""
 
 import MySQLdb
 from sys import argv

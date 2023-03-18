@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This script lists relationship
+"""
 
 import sys
 from sqlalchemy import create_engine

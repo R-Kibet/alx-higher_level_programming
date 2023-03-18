@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+This script ouputs data with specific
+character
+"""
 
 import MySQLdb
 from sys import argv

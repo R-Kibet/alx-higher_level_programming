@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This script selects all from database
+"""
 
 import sqlalchemy
 import sys

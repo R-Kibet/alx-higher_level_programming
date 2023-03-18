@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This script uses user input
+"""
 
 import MySQLdb
 from sys import argv

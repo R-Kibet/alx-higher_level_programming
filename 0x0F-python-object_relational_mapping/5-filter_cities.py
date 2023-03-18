@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This script uses join order_by
+"""
 
 import MySQLdb
 from sys import argv

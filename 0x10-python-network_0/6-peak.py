@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Finds a peak  """
+""" Finds a peak of an array list of ints """
 
 
 def find_peak(list_of_integers):

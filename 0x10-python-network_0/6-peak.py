@@ -3,6 +3,7 @@
 
 
 def find_peak(list_of_integers):
+    """ find peak of the array """
     if list_of_integers == []:
         return None
 

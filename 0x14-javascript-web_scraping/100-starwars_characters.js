@@ -9,7 +9,6 @@ request(url, (err, response, body) => {
   } else {
     const getres = JSON.parse(body).characters;
     getres.forEach((results) => {
-
       request(results, (err, res, data) => {
         if (res) {
           console.log(JSON.parse(data).name);

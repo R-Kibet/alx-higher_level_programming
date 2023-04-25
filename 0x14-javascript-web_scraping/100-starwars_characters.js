@@ -1,13 +1,21 @@
 #!/usr/bin/node
 const request = require('request');
-const url = 'https://swapi.co/api/films/' + process.argv[2];
-request(url, function (error, response, body) {
-  if (!error) {
-    const characters = JSON.parse(body).characters;
-    characters.forEach((character) => {
-      request(character, function (error, response, body) {
-        if (!error) {
-          console.log(JSON.parse(body).name);
+const id = process.argv[2];
+const starWarsApi = `https://swapi-api.alx-tools.com/api/films/${id}`;
+
+request(starWarsApi, function (error, response, body) {
+  if (error) {
+    console.log(error);
+  } else {
+    const getResults = JSON.parse(body);
+    getResults.characters.forEach((results) => {
+      //  console.log(results)
+      request(results, function (err, res, body2) {
+        if (res) {
+          const charactersName = JSON.parse(body2);
+          console.log(charactersName.name);
+        } else {
+          console.log(err);
         }
       });
     });

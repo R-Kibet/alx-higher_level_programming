@@ -10,9 +10,9 @@ request(url, (error, response, body) => {
   } else {
     const getres = JSON.parse(body).characters;
     getres.forEach((results) => {
-      request(results, (err, res, body) => {
+      request(results, (err, res, body1) => {
         if (res) {
-          console.log(JSON.parse(body).name);
+          console.log(JSON.parse(body1).name);
         } else {
           console.log(err);
         }

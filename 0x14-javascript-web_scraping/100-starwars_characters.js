@@ -1,18 +1,17 @@
 #!/usr/bin/node
 
 const request = require('request');
-const id = process.argv[2];
-const url = `https://swapi.co/api/films/${id}`;
+const url = 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2];
 
-request(url, (error, response, body) => {
-  if (error) {
-    console.log(error);
+request(url, (err, response, body) => {
+  if (err) {
+    console.log(err);
   } else {
-    const getres = JSON.parse(body);
-    getres.characters.forEach((results) => {
-      request(results, (err, res, body1) => {
+    const getres = JSON.parse(body).characters;
+    getres.forEach((results) => {
+      request(results, (err, res, body) => {
         if (res) {
-          console.log(JSON.parse(body1).name);
+          console.log(JSON.parse(body).name);
         } else {
           console.log(err);
         }

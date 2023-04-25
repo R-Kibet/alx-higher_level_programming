@@ -1,7 +1,8 @@
 #!/usr/bin/node
 
 const request = require('request');
-const url = 'https://swapi.co/api/films/' + process.argv[2];
+const id = process.argv[2];
+const url = `https://swapi.co/api/films/${id}`;
 
 request(url, (error, response, body) => {
   if (error) {
@@ -9,9 +10,9 @@ request(url, (error, response, body) => {
   } else {
     const getres = JSON.parse(body).characters;
     getres.forEach((results) => {
-      request(results, (err, res, data) => {
+      request(results, (err, res, body) => {
         if (res) {
-          console.log(JSON.parse(data).name);
+          console.log(JSON.parse(body).name);
         } else {
           console.log(err);
         }

@@ -8,8 +8,8 @@ request(url, (error, response, body) => {
   if (error) {
     console.log(error);
   } else {
-    const getres = JSON.parse(body).characters;
-    getres.forEach((results) => {
+    const getres = JSON.parse(body);
+    getres.characters.forEach((results) => {
       request(results, (err, res, body1) => {
         if (res) {
           console.log(JSON.parse(body1).name);
